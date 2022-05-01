@@ -46,7 +46,7 @@ pipeline {
 			steps{
 				//"docker build -t kmcarvalho/currency-exchange-devops:$env.BUILD_TAG"
 				script {
-					dockerImage = docker.build("kmcarvalho/currency-exchange-devops:{$env.BUILD_TAG}");
+					dockerImage = docker.build("kmcarvalho/currency-exchange-devops:${env.BUILD_TAG}");
 				}
 			}
 		}
